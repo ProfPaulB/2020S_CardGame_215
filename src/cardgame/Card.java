@@ -11,7 +11,7 @@ public class Card {
     
     public enum Value {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN,
-        EIGHT, NINE, TEN, JACK, QUEEN, KING, EMPEROR
+        EIGHT, NINE, TEN, JACK, QUEEN, KING
     }
 
     public Card(Value value, Suit suit) {
