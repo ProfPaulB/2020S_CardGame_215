@@ -2,18 +2,24 @@ package cardgame;
 
 public class Card {
 
-    private int value;
-    private String suit;
+    private Value value;
+    private Suit suit;
 
-    public static final String[] SUITS
-            = {"Hearts", "Diamonds", "Spades", "Clubs"};
+    public enum Suit {
+        HEARTS, CLUBS, SPADES, DIAMONDS
+    }
+    
+    public enum Value {
+        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN,
+        EIGHT, NINE, TEN, JACK, QUEEN, KING, EMPEROR
+    }
 
-    public Card(int value, String suit) {
+    public Card(Value value, Suit suit) {
         this.value = value;
         this.suit = suit;
     }
 
-    public int getValue() {
+    public Value getValue() {
         return this.value;
     }
 
@@ -21,11 +27,11 @@ public class Card {
      *
      * @param value
      */
-    public void setValue(int value) {
+    public void setValue(Value value) {
         this.value = value;
     }
 
-    public String getSuit() {
+    public Suit getSuit() {
         return this.suit;
     }
 
@@ -33,7 +39,7 @@ public class Card {
      *
      * @param suit
      */
-    public void setSuit(String suit) {
+    public void setSuit(Suit suit) {
         this.suit = suit;
     }
 
